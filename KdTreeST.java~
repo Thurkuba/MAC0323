@@ -1,0 +1,68 @@
+import edu.princeton.cs.algs4.*;
+
+public class KdTreeST {
+
+    private int size;
+    private Node root;
+    
+    private class Node {
+	private Point2D p;     
+	private Value value;   
+	private RectHV rect;    
+	private Node lb;       
+	private Node rt;
+	private boolean vert; //Orientacao: se True, vertical. Se False, horizontal.
+
+	public Node(Point2D p, Value val) {
+	    this.p = p;
+	    this.val = val;
+	   
+	}
+
+	public int getx() {
+	    return p.x();
+	}
+
+	public int gety() {
+	    return p.y(); 
+	}
+    }
+
+    public boolean isEmpty() {
+
+	return (root==null);
+    }
+
+    public int size() {
+	
+	return size;
+    }
+
+    public void put(Point2D p, Value val) {
+
+	verify(p);
+	if (val == null) {
+            delete(key);
+            return;
+        }
+
+        root = put(root, key, val);
+    }
+
+    private Node put(Node x, Point2D p, Value val){
+	if(x == null) return new Node (p, val);
+	int cmp;
+	if(x.vert) cmp = x.getx().compareTo(p.x());
+	else cmp = x.gety().compareTo(p.y());
+	
+    }
+
+    private int compareTo(Node a, Node b){
+	
+    }
+
+    private void verify(Point2D p) {
+
+	if(p == null) throw new java.lang.IllegalArgumentException();
+    }
+    

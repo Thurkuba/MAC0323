@@ -1,0 +1,48 @@
+public class PointST<Value> {
+
+    private RedBlackBST<Point2D, Value> redblack;
+
+    public PointST<Value>() {
+
+	redblack = new RedBlackBST<Point2D, Value>();
+    }
+
+    public boolean isEmpty() {
+
+	return redblack.isEmpty();
+    }
+
+    public int size() {
+
+	return redblack.size();
+    }
+
+    public void put(Point2D p, Value val) {
+
+	verify(p);
+	redblack.put(p, val);
+    }
+
+    public Value get(Point2D p) {
+
+	verify(p);
+	return redblack.get(p);
+    }
+
+    private void verify(Point2D p) {
+
+	if(p == null) throw new java.lang.IllegalArgumentException;
+    }
+      
+    public boolean contains(Point2D p) {
+
+	return (redblack.get(p)!=null);
+    }
+
+    public static void main(String[] args) {
+
+	PointST st = new PointST<String>();
+	
+    }
+	
+}

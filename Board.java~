@@ -1,0 +1,25 @@
+public class Board {
+    int[][] tiles;
+
+    public Board(int[][] tiles){
+	this.tiles = tiles;
+    }
+
+    public String toString(){
+	StdOut.println("  " + size());
+    }
+
+    public int tileAt(int row, int col){
+	
+    }
+
+    public int size(){
+	return tiles.length;
+    }
+
+    public static void main(String[] args){
+	int n = args[0];
+	int[][] meuboard = new int[n][n];
+	StdOut.println(meuboard.size);
+    }
+}

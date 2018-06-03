@@ -1,0 +1,11 @@
+10
+	1 salvador
+	2 beijinho
+	3 bombom
+	4 capoeira
+	5 berimbau
+	6 atabaque
+	7 maneiro
+	8 oito
+	9 teste
+	10 tudoserto
